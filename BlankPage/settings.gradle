@@ -1,0 +1,2 @@
+rootProject.name='BlankPage'
+include ':app'

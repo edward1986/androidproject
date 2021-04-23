@@ -1,0 +1,2 @@
+rootProject.name='animationusingxml'
+include ':app'

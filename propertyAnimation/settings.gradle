@@ -1,0 +1,2 @@
+rootProject.name='propertyAnimation'
+include ':app'

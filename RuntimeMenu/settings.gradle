@@ -1,0 +1,2 @@
+rootProject.name='RuntimeMenu'
+include ':app'

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "488523005504",
+    "project_id": "text-detection-4db63",
+    "storage_bucket": "text-detection-4db63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488523005504:android:95b7451d3995aceb7b69a5",
+        "android_client_info": {
+          "package_name": "com.example.fluttertext_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488523005504-q9fl8iiv27a5chnb9n0f1n8af0che9fd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2bPaNAFRIR7QxABS79096pU37rBXFpZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488523005504-q9fl8iiv27a5chnb9n0f1n8af0che9fd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

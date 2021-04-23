@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TransitionActivity</string>
+    <string name="some_text">some text</string>
+</resources>

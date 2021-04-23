@@ -1,0 +1,2 @@
+rootProject.name='CircularLoading'
+include ':app'

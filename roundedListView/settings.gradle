@@ -1,0 +1,2 @@
+rootProject.name='roundedListView'
+include ':app'

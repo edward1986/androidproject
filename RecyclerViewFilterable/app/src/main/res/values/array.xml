@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string-array name="spinnertype">
+        <item>Query all data by default</item>
+        <item>Fruit</item>
+        <item>Vegetables</item>
+        <item>Beverage and milk drink</item>
+        <item>Snacks</item>
+    </string-array>string-array>
+<string-array name="spinnerDelivery">
+    <item>Delivery method</item>
+    <item>Same city delivery</item>
+    <item>Ordinary Express</item>
+</string-array>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RetrofitMultipleUpload</string>
+    <string name="string_some_thing_wrong">Something Wrong</string>
+    <string name="string_internet_connection_not_available">Internet Connection not available</string>
+</resources>

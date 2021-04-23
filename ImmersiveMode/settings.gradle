@@ -1,0 +1,2 @@
+rootProject.name='ImmersiveMode'
+include ':app'
