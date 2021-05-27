@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimpleBinding</string>
+    <string name="submit">submit</string>
+    <string name="insert_you_name_here">insert</string>
+</resources>

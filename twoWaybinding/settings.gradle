@@ -1,0 +1,2 @@
+rootProject.name='twoWaybinding'
+include ':app'

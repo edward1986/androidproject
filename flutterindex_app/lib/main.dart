@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'indexedstack/first_page.dart';
-import 'indexedstack/second_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -27,62 +26,103 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: IndexedStackScrool(title: 'Flutter Demo Home Page'),
+      home: CustomNavigationBarDemo(),
     );
   }
 }
-class IndexedStackScrool extends StatefulWidget {
-  IndexedStackScrool({Key key, this.title}) : super(key: key);
-  final String title;
+
+class CustomNavigationBarDemo extends StatefulWidget {
+
 
   @override
-  _IndexedStackScroolState createState() => _IndexedStackScroolState();
+  _CustomNavigationBarDemoState createState() =>
+      _CustomNavigationBarDemoState();
 }
 
-class _IndexedStackScroolState extends State<IndexedStackScrool> {
+class _CustomNavigationBarDemoState extends State<CustomNavigationBarDemo> {
 
-  int _selectedPage = 0;
-  List<Widget> pageList = List<Widget>();
-
-  @override
-  void initState() {
-    pageList.add(FirstPage());
-    pageList.add(SecondPage());
-    super.initState();
-  }
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.pink[300],
+        title: Text('Flutter Indexed Stack Demo'),
       ),
-      body: IndexedStack(
-        index: _selectedPage,
-        children: pageList,
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.phone_android),
-            title: Text('First Page'),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.phone_android),
-            title: Text('Second Page'),
-          ),
-        ],
-        currentIndex: _selectedPage,
-        selectedItemColor: Colors.blue,
-        onTap: _onItemTapped,
+      body: Padding(
+        child: Column(
+          children: <Widget>[
+            _stackedContainers(),
+            _navigationButtons()
+          ],
+        ),
+        padding: EdgeInsets.all(5.0),
       ),
     );
   }
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedPage = index;
-    });
+  Widget _stackedContainers() {
+    return Expanded(
+      child: IndexedStack(
+        index: index,
+        children: <Widget>[
+          Container(
+              child: Center(
+                  child: Image.asset("assets/images/apple-icon-114x114.png",)
+              )
+          ),
+          Container(
+              child: Center(
+                  child: Image.asset("assets/images/img_avatar2.png",)
+              )
+          ),
+          Container(
+              child: Center(
+                  child: Image.asset("assets/images/img_avatar3.png",)
+              )
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _navigationButtons() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        FlatButton(
+          color: Colors.pink[300],
+          child: Text(
+            'Flutter', style: TextStyle(fontSize: 16.0, color: Colors.white),),
+          onPressed: () {
+            setState(() {
+              index = 0;
+            });
+          },
+        ),
+        FlatButton(
+          color: Colors.pink[300],
+          child: Text(
+            'dolor', style: TextStyle(fontSize: 16.0, color: Colors.white),),
+          onPressed: () {
+            setState(() {
+              index = 1;
+            });
+          },
+        ),
+        FlatButton(
+          color: Colors.pink[300],
+          child: Text('lorem ipsum',
+            style: TextStyle(fontSize: 16.0, color: Colors.white),),
+          onPressed: () {
+            setState(() {
+              index = 2;
+            });
+          },
+        ),
+      ],
+    );
   }
 }
